@@ -1,6 +1,12 @@
+
+
+
+
+
+
 ---
 ###
-### Controller
+### Controller (namespace-wide components)
 ###
 ---
 kind: ServiceAccount
@@ -270,10 +276,9 @@ data:
     GlobalConfig
   proxy: |
     ProxyConfig
-
 ---
 ###
-### Web
+### Web (namespace-wide components)
 ###
 ---
 kind: ServiceAccount
@@ -432,7 +437,7 @@ spec:
 status: {}
 ---
 ###
-### Prometheus
+### Prometheus (namespace-wide components)
 ###
 ---
 kind: ServiceAccount
@@ -714,7 +719,7 @@ data:
         regex: __meta_kubernetes_pod_label_linkerd_io_(.+)
 ---
 ###
-### Grafana
+### Grafana (namespace-wide components)
 ###
 ---
 kind: ServiceAccount
@@ -937,10 +942,9 @@ data:
       options:
         path: /var/lib/grafana/dashboards
         homeDashboardId: linkerd-top-line
-
 ---
 ###
-### CA
+### CA (namespace-wide components)
 ###
 ---
 kind: ServiceAccount
