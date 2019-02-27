@@ -287,6 +287,7 @@ func newCmdTop() *cobra.Command {
   * ns/my-ns
   * sts
   * sts/my-statefulset
+  * job/my-job
 
   Valid resource types include:
   * daemonsets
