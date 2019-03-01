@@ -5,13 +5,12 @@ import (
 )
 
 // NewFakeAPI provides a mock Kubernetes API for testing.
-func NewFakeAPI(namespace string, configs ...string) (*API, error) {
+func NewFakeAPI(configs ...string) (*API, error) {
 	clientSet, spClientSet := k8s.NewFakeClientSets(configs...)
 
 	return NewAPI(
 		clientSet,
 		spClientSet,
-		namespace,
 		CM,
 		Deploy,
 		DS,
