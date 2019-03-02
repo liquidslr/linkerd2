@@ -44,11 +44,11 @@ func main() {
 		log.Fatalf("failed to read the trust anchor file: %s", err)
 	}
 
-	mwc, err := webhookConfig.CreateOrUpdate()
+	mwc, err := webhookConfig.Create()
 	if err != nil {
 		log.Fatalf("failed to create the mutating webhook configurations resource: %s", err)
 	}
-	log.Infof("created or updated mutating webhook configuration: %s", mwc.ObjectMeta.SelfLink)
+	log.Infof("created mutating webhook configuration: %s", mwc.ObjectMeta.SelfLink)
 
 	resources := &injector.WebhookResources{
 		FileProxySpec:                k8sPkg.MountPathConfigProxySpec,
