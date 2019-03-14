@@ -6,7 +6,6 @@ sudo: false
 # for each branch. Take that, Big CI!
 branches:
   only:
-    - master
     - /^(edge|stable)-\d+\.\d+\.[\w-]+$/ # build version tags
 
 stages:
